@@ -11,6 +11,7 @@
     font-family: 'Bungee', cursive;
 }
 
+
 #button {
     color: oldlace;
     background-color: maroon;
@@ -20,7 +21,7 @@
   float: right;  
 }
 
-#search {
+#tweet-text {
   background-color:transparent;
   border: 0;
   width: 100%;
