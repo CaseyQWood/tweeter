@@ -3,10 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* padding-left: 1.5em;
-    padding-right: 1.5em; */
     padding: 1.5em;
-    /* align-items: baseline; */
     justify-content: space-around;
 }
 
@@ -16,22 +13,17 @@
 
 #button {
     color: oldlace;
-    background-color: rgb(37, 37, 194);
+    background-color: maroon;
 }
 
 #number {
   float: right;  
 }
 
-
 #search {
   background-color:transparent;
   border: 0;
   width: 100%;
+  border-bottom: grey 5px solid;
 }
 
-#line {
-    height: 3px;
-    margin: 0;
-   background-color: brown; 
-}
