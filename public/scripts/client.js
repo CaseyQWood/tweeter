@@ -69,5 +69,10 @@ $(document).ready(function() {
   const time = timeElement.data('time')
   const timeAgo = timeago.format(time)
   timeElement.text(timeAgo)
+
+  $('.form-submit').submit((event) => {
+    alert('handler for submit')
+    event.preventDefault();
+  })
 });
 
