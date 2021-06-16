@@ -1,4 +1,4 @@
-header {
+#profile {
     background-color: #5b0202;
     background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
     height: 400px;
@@ -15,4 +15,9 @@ header {
 
 #profile-tile {
     height: 150px;
+}
+
+footer i { 
+    display: flex;
+    justify-content: space-around;
 }

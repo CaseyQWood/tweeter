@@ -1,0 +1,38 @@
+.future-tweets {
+  display: flex;
+  background-color: rgb(193, 192, 192);
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 36px;
+  padding: 36px;
+  /* position: relative; */
+  flex-direction: column;
+  border: black solid 3px;
+}
+article {
+  overflow: auto;
+}
+
+article header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.future-tweets__header {
+
+}
+
+footer {
+  height: 50px;
+  border-top: black solid 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.tiny-icon {
+  margin: 0 5px;
+  color: brown;
+  float: right;
+  padding-top: 30px;
+}

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/nav_bar.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new_tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/created-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -34,7 +35,7 @@
         </div>
       </div>
     </nav>
-    <header>
+    <header id='profile'>
       <div>
         <img id='profile-tile' src="/images/profile-hex.png"> 
       </div>
@@ -55,15 +56,23 @@
           </div>
         </form>
       </section>
-      <article class='old-tweet'>
-        
+      <article class='future-tweets'>
         <header>
-
+          <div class='future-tweets__header'>
+            <i class="fas fa-headset"></i>
+            King Aurther
+          </div>
+          <div>@hughJackman</div>
         </header>
+        <p>If I have seen further it is by standing on the shoulders of Giants</p>
         <footer>
-
+          <p>10 days ago</p>
+          <div>
+            <i class="tiny-icon fas fa-heart"></i>
+            <i class="tiny-icon fas fa-share-square"></i>
+            <i class="tiny-icon far fa-flag"></i>
+          </div>
         </footer>
-
       </article>
     </main>
   </body>
