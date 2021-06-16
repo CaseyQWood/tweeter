@@ -9,26 +9,23 @@
 
 .bottom_line {
     font-family: 'Bungee', cursive;
+    display: flex;
+    justify-content: space-between;
 }
 
 
-#button {
+.button {
     color: oldlace;
     background-color: maroon;
 }
 
-#number {
-  float: right;  
-}
-
-#tweet-text {
+.tweet-text {
   background-color:transparent;
   border: 0;
   width: 100%;
   border-bottom: grey 5px solid;
+  resize: vertical;
+
 }
 
-.too-much-char {
-  color: brown;
-}
 
