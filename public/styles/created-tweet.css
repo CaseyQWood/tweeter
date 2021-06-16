@@ -10,6 +10,10 @@
   border: black solid 3px;
 }
 
+.future-tweets:hover {
+  box-shadow: 0 0 11px white; 
+}
+
 article header {
   display: flex;
   justify-content: space-between;
@@ -24,11 +28,12 @@ footer {
   font-size: 15px;
 }
 
-
 .tiny-icon {
-  
   margin: 0 5px;
   color: brown;
   float: right;
   padding-top: 15px;
+}
+.tiny-icon:hover {
+  color: lightcoral;
 }
