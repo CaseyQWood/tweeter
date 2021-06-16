@@ -1,4 +1,4 @@
-.future-tweets {
+.tweets-container {
   display: flex;
   background-color: rgb(193, 192, 192);
   font-family: 'Source Sans Pro', sans-serif;
@@ -9,13 +9,20 @@
   border: grey 5px solid;
 }
 
-.future-tweets:hover {
+.tweets-container:hover {
   box-shadow: 0 0 11px white; 
 }
 
 article header {
   display: flex;
   justify-content: space-between;
+}
+
+.color-red {
+  color: maroon;
+}
+.color-grey {
+  color: grey
 }
 
 footer {

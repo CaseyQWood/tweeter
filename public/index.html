@@ -46,20 +46,20 @@
       </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main>
+    <main class='main-tweet'>
       <section class="new-tweet">
         <form method='POST' action='/tweets'>
           <textarea placeholder="What are you humming about?" name="text" class="tweet-text"></textarea>​​​​​​​​​​​​​​​​​​​
           <div class='bottom_line'>
             <button class='button' type="submit">Tweet</button>
-            <output name="counter" for="tweet-text">140</output>
+            <output id='number' name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-      <article class='future-tweets'>
+      <!-- <article class='tweets-container'>
         <header>
-          <div class='future-tweets__header'>
-            <i class="fas fa-headset"></i>
+          <div>
+            <i class="fas color-red fa-headset"></i>
             King Aurther
           </div>
           <div>@hughJackman</div>
@@ -73,7 +73,7 @@
             <i class="tiny-icon far fa-flag"></i>
           </div>
         </footer>
-      </article>
+      </article> -->
     </main>
   </body>
 </html>
