@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
-// clean this up later 
 const createTweetElement = function(data) {
   const userKey = data.user
   return `
@@ -62,17 +36,36 @@ const renderTweets = function(data) {
 };
 
 $(document).ready(function() {
-  renderTweets(data)
+  // renderTweets(data)
 
   // translates the time in miliseconds to human readable time
   const timeElement = $('.time')
   const time = timeElement.data('time')
   const timeAgo = timeago.format(time)
+
   timeElement.text(timeAgo)
 
-  $('.form-submit').submit((event) => {
-    alert('handler for submit')
+  // manages submits post request to /tweets when submit is pressed 
+  $('.form-submit').submit(function(event) {
     event.preventDefault();
+
+    const formElement = $('.form-submit')
+    const textInput = $(this).serialize()
+    
+    $.post('/tweets', textInput)
+      .then(function (tweets) {
+        renderTweets(tweets)
+      })
   })
+  
+  const $loadTweets = () => {
+    $.get('/tweets', () => {})
+    .then(function (tweets) {
+      renderTweets(tweets)
+    })
+  } 
+
+  $loadTweets()
+  
 });
 

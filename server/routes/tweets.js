@@ -17,6 +17,7 @@ module.exports = function(DataHelpers) {
     });
   });
 
+  // consider updating route from / to /tweets for consistency 
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
@@ -36,7 +37,7 @@ module.exports = function(DataHelpers) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        res.status(201).send();
+        res.status(201).json([tweet]);
       }
     });
   });
