@@ -7,11 +7,13 @@
 
 const createTweetElement = function(data) {
   const userKey = data.user
+  const timeAgo = timeago.format(data.created_at)
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+   
 
   return `
     <article class='tweets-container'>
@@ -24,7 +26,7 @@ const createTweetElement = function(data) {
       </header>
       <p id='wrap'>${escape(data.content.text)}</p>
       <footer>
-        <p class='time' data-time='${escape(data.created_at)}'></p>
+        <p class='time'>${escape(timeAgo)}</p>
         <div>
           <i class="tiny-icon fas fa-heart"></i>
           <i class="tiny-icon fas fa-share-square"></i>
@@ -40,11 +42,6 @@ const renderTweets = function(data) {
     const $tweet = createTweetElement(index)
     $('#history').prepend($tweet)
 
-    // translates the time in miliseconds to human readable time
-    const timeElement = $('.time')
-    const time = timeElement.data('time')
-    const timeAgo = timeago.format(time)
-    timeElement.text(timeAgo)
   }
 };
 
