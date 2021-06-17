@@ -57,17 +57,23 @@ const renderTweets = function(data) {
 
 $(document).ready(function() {
 
+  $('span.error-message').hide()
+
   // manages the submit button for new tweets,  
   $('.form-submit').submit(function(event) {
     const $textArea = $('.tweet-text-area')
     event.preventDefault();
 
+    
+
     // error handling ( this could be turned intoa function and used in char counter)
     if ($textArea.val().length === 0) {
-      return alert('Live every day as if it were going to be your last; for one day you’re sure to be right\n\nIt seems you have not entered anything, please try again')
+      return $('span.error-message').show().text('It seems you have not entered anything, please try again')
+      // return alert('Live every day as if it were going to be your last; for one day you’re sure to be right\n\nIt seems you have not entered anything, please try again')
     }
     if ($textArea.val().length > 140) {
-      return alert('Talk low, talk slow and don\'t say too much.\n\nIt seems you have used too many characters')
+      return $('span.error-message').show().text('It seems you have used too many characters')
+      // return alert('Talk low, talk slow and don\'t say too much.\n\nIt seems you have used too many characters')
     }
 
     const textInput = $(this).serialize()
