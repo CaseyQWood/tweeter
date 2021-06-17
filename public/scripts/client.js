@@ -32,19 +32,16 @@ const renderTweets = function(data) {
   for (const index of data) {
     const $tweet = createTweetElement(index)
     $('.main-tweet').append($tweet)
+
+    // translates the time in miliseconds to human readable time
+    const timeElement = $('.time')
+    const time = timeElement.data('time')
+    const timeAgo = timeago.format(time)
+    timeElement.text(timeAgo)
   }
 };
 
 $(document).ready(function() {
-  // renderTweets(data)
-
-  // translates the time in miliseconds to human readable time
-  const timeElement = $('.time')
-  const time = timeElement.data('time')
-  const timeAgo = timeago.format(time)
-
-  timeElement.text(timeAgo)
-
   // manages submits post request to /tweets when submit is pressed 
   $('.form-submit').submit(function(event) {
     const $textArea = $('.tweet-text-area')
@@ -59,6 +56,7 @@ $(document).ready(function() {
       return alert('Talk low, talk slow and don\'t say too much.\n\nIt seems you have used too many characters')
     }
 
+  
     const textInput = $(this).serialize()
 
     $.post('/tweets', textInput)
@@ -69,16 +67,16 @@ $(document).ready(function() {
   // clears text area once submited and resets the counter
     $textArea.val('');
     $('#number').text(`140`);
-  })
+  });
   
   const $loadTweets = () => {
     $.get('/tweets', () => {})
     .then(function (tweets) {
       renderTweets(tweets)
     })
-  } 
+  };
 
   $loadTweets()
-  
+
 });
 
