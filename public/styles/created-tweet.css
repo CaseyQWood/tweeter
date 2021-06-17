@@ -44,3 +44,7 @@ footer {
 .tiny-icon:hover {
   color: lightcoral;
 }
+
+#wrap {
+  word-wrap: break-word;
+}

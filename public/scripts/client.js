@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 const createTweetElement = function(data) {
   const userKey = data.user
   const escape = function (str) {
@@ -21,7 +22,7 @@ const createTweetElement = function(data) {
         </div>
         <div>${escape(userKey.handle)}</div>
       </header>
-      <p>${escape(data.content.text)}</p>
+      <p id='wrap'>${escape(data.content.text)}</p>
       <footer>
         <p class='time' data-time='${escape(data.created_at)}'></p>
         <div>
@@ -58,6 +59,9 @@ const renderTweets = function(data) {
 $(document).ready(function() {
 
   $('span.error-message').hide()
+  $('span.error-message').on('click', function() {
+    $(this).fadeOut()
+  })
 
   // manages the submit button for new tweets,  
   $('.form-submit').submit(function(event) {
@@ -68,11 +72,11 @@ $(document).ready(function() {
 
     // error handling ( this could be turned intoa function and used in char counter)
     if ($textArea.val().length === 0) {
-      return $('span.error-message').show().text('It seems you have not entered anything, please try again')
+      return $('span.error-message').fadeIn().text('It seems you have not entered anything, please try again')
       // return alert('Live every day as if it were going to be your last; for one day you’re sure to be right\n\nIt seems you have not entered anything, please try again')
     }
     if ($textArea.val().length > 140) {
-      return $('span.error-message').show().text('It seems you have used too many characters')
+      return $('span.error-message').fadeIn().text('It seems you have used too many characters')
       // return alert('Talk low, talk slow and don\'t say too much.\n\nIt seems you have used too many characters')
     }
 
