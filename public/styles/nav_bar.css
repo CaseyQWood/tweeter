@@ -48,6 +48,10 @@ nav span {
     font-size: 1em;
     padding-top: 0;
   }
+  .hud {
+    padding-top: 2em;
+    align-items: baseline;
+  }
 }
 
 
