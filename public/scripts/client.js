@@ -48,10 +48,13 @@ $(document).ready(function() {
   // manages submits post request to /tweets when submit is pressed 
   $('.form-submit').submit(function(event) {
     event.preventDefault();
-
-    const formElement = $('.form-submit')
     const textInput = $(this).serialize()
-    
+
+    console.log($('.tweet-text').val())
+
+    // clears text area once submited
+    $('.tweet-text').val('')
+
     $.post('/tweets', textInput)
       .then(function (tweets) {
         renderTweets(tweets)
