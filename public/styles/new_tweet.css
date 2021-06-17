@@ -33,6 +33,8 @@
   border: 1px solid #fcc2c3;
   width: auto;
   padding: 1em 2em;
+  margin-bottom: 1em;
+  border-radius: 15px;
 }
 
 .error-text {
