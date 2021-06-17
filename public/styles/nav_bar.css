@@ -2,11 +2,14 @@ nav {
     position: fixed;
     left: 0;
     right: 0;
-    background-color: grey;
-    background-image: url("https://www.transparenttextures.com/patterns/real-carbon-fibre.png");
     color: #ffff;
     height: 120px;
     z-index: 1;
+}
+
+.nav-background {
+    background-color: grey;
+    background-image: url("https://www.transparenttextures.com/patterns/real-carbon-fibre.png");
 }
 
 nav span {
@@ -39,5 +42,7 @@ nav span {
     margin: 0;
   
 }
+
+
 
 
