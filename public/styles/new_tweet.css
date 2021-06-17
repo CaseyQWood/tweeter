@@ -11,11 +11,13 @@
     font-family: 'Bungee', cursive;
     display: flex;
     justify-content: space-between;
+    padding-top: 1em;
 }
 
 .button {
     color: oldlace;
     background-color: maroon;
+    border-radius: 15px;
 }
 
 .tweet-text-area {
