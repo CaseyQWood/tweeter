@@ -48,6 +48,7 @@
     <!-- Page-specific (main) content here -->
     <main class='main-tweet'>
       <section class="new-tweet">
+        <span class='error-message error-text'>this is filler</span>
         <form class='form-submit' method='POST' action='/tweets'>
           <textarea placeholder="What are you humming about?" name="text" class="tweet-text-area"></textarea>​​​​​​​​​​​​​​​​​​​
           <div class='bottom_line'>
@@ -56,24 +57,7 @@
           </div>
         </form>
       </section>
-      <!-- <article class='tweets-container'>
-        <header>
-          <div>
-            <i class="fas color-red fa-headset"></i>
-            King Aurther
-          </div>
-          <div>@hughJackman</div>
-        </header>
-        <p>If I have seen further it is by standing on the shoulders of Giants</p>
-        <footer>
-          <p class='time' data-time="1623621475652"></p>
-          <div>
-            <i class="tiny-icon fas fa-heart"></i>
-            <i class="tiny-icon fas fa-share-square"></i>
-            <i class="tiny-icon far fa-flag"></i>
-          </div>
-        </footer>
-      </article> -->
+      <div id='history'></div>
     </main>
   </body>
 </html>

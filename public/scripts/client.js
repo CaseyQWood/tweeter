@@ -6,18 +6,24 @@
 
 const createTweetElement = function(data) {
   const userKey = data.user
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   return `
     <article class='tweets-container'>
       <header>
         <div>
-          <image src='${userKey.avatars}' class="color-red"></image>
-          ${userKey.name}
+          <image src='${escape(userKey.avatars)}' class="color-red"></image>
+          ${escape(userKey.name)}
         </div>
-        <div>${userKey.handle}</div>
+        <div>${escape(userKey.handle)}</div>
       </header>
-      <p>${data.content.text}</p>
+      <p>${escape(data.content.text)}</p>
       <footer>
-        <p class='time' data-time='${data.created_at}'></p>
+        <p class='time' data-time='${escape(data.created_at)}'></p>
         <div>
           <i class="tiny-icon fas fa-heart"></i>
           <i class="tiny-icon fas fa-share-square"></i>
@@ -31,7 +37,7 @@ const createTweetElement = function(data) {
 const renderTweets = function(data) {
   for (const index of data) {
     const $tweet = createTweetElement(index)
-    $('.main-tweet').append($tweet)
+    $('#history').prepend($tweet)
 
     // translates the time in miliseconds to human readable time
     const timeElement = $('.time')
@@ -41,14 +47,22 @@ const renderTweets = function(data) {
   }
 };
 
+ //loads tweets on initial load 
+ const $loadTweets = () => {
+  $.get('/tweets', () => {})
+  .then(function (tweets) {
+    renderTweets(tweets)
+  })
+};
+
 $(document).ready(function() {
-  // manages submits post request to /tweets when submit is pressed 
+
+  // manages the submit button for new tweets,  
   $('.form-submit').submit(function(event) {
     const $textArea = $('.tweet-text-area')
     event.preventDefault();
-    console.log($textArea.val().length)
 
-    // error handling
+    // error handling ( this could be turned intoa function and used in char counter)
     if ($textArea.val().length === 0) {
       return alert('Live every day as if it were going to be your last; for one day you’re sure to be right\n\nIt seems you have not entered anything, please try again')
     }
@@ -56,7 +70,6 @@ $(document).ready(function() {
       return alert('Talk low, talk slow and don\'t say too much.\n\nIt seems you have used too many characters')
     }
 
-  
     const textInput = $(this).serialize()
 
     $.post('/tweets', textInput)
@@ -69,14 +82,7 @@ $(document).ready(function() {
     $('#number').text(`140`);
   });
   
-  const $loadTweets = () => {
-    $.get('/tweets', () => {})
-    .then(function (tweets) {
-      renderTweets(tweets)
-    })
-  };
-
-  $loadTweets()
+   $loadTweets()
 
 });
 
