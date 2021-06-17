@@ -49,3 +49,18 @@ footer {
 #wrap {
   word-wrap: break-word;
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  footer {
+    font-size: .65em;
+  } 
+  header div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .color-red {
+    width: 60px;
+  }
+}

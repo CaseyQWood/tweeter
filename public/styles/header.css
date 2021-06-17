@@ -1,20 +1,34 @@
 #profile {
-    background-color: #5b0202;
-    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-    height: 520px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+  background-color: #5b0202;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  height: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #your-name {
-    margin-top: 0;
-    font-size: 60px;
+  margin-top: 0;
+  font-size: 60px;
 }
 
 #profile-tile {
-    height: 250px;
+  height: 250px;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  #profile {
+    height: 450px;
+  }
+
+  #profile-tile {
+      height: 9em;
+  }
+
+  #your-name {
+      margin-top: 0;
+      font-size: 2em;
+  }
+}
