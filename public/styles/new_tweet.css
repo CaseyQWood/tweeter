@@ -5,6 +5,7 @@
     flex-direction: column;
     padding: 1.5em;
     justify-content: space-around;
+    padding-bottom: 0;
 }
 
 .bottom_line {
@@ -44,4 +45,8 @@
   font-weight: bold;
   line-height: 20px;
   text-shadow: 1px 1px rgba(250,250,250,.3);
+}
+
+#history {
+  padding-top: 15px;
 }
