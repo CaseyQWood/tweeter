@@ -24,11 +24,19 @@
   }
 
   #profile-tile {
-      height: 9em;
+    height: 9em;
   }
 
   #your-name {
-      margin-top: 0;
-      font-size: 2em;
+    margin-top: 0;
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #profile {
+    margin: 5em;
+    position: sticky;
+    top: 20em;
   }
 }
