@@ -4,7 +4,8 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
-    
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,47 +16,51 @@
     <link rel="stylesheet" href="/styles/nav_bar.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new_tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/created-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/composer-scroll.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/nav-fold.js"></script>
+    <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class='nav-background'>
       <div class='hud'>
         <span>tweeter</span>
-        <div id='quick-link'>  
-          <p id='write-tweet'><b>Write</b> a new tweet</p>
+        <div class='quick-link'>  
+          <p class='write-tweet'><b>Write</b> a new tweet</p>
           <i class="fas fa-angle-double-down"></i>
         </div>
       </div>
     </nav>
-    <header>
-      <div>
-        <img id='profile-tile' src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-        <h2 id='your-name'>Your Name</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main>
-      <section class="new-tweet">
-        <form method='POST' action='/tweets'>
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea placeholder="What are you humming about?" id='search' name="text" id="tweet-text"></textarea>​​​​​​​​​​​​​​​​​​​
-          <div class='bottom_line'>
-            <button id='button' type="submit">Tweet</button>
-            <output id='number' name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      </p>
-    </main>
+      <header class='profile'>
+        <div>
+          <img id='profile-tile' src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+          <h2 id='your-name'>Your Name</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class='main-tweet'>
+        <section class="new-tweet">
+          <span class='error-message error-text'></span>
+          <form class='form-submit' method='POST' action='/tweets'>
+            <textarea placeholder="What are you humming about?" name="text" class="tweet-text-area"></textarea>​​​​​​​​​​​​​​​​​​​
+            <div class='bottom_line'>
+              <button class='button' type="submit">Tweet</button>
+              <output id='number' name="counter" class="counter" for="tweet-text-area">140</output>
+            </div>
+          </form>
+        </section>
+        <div id='history'></div>
+      </main>
   </body>
 </html>

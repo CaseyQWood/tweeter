@@ -26,9 +26,38 @@ body {
  */
 
 main {
+  background-color:rgb(193, 192, 192);
   position: relative;
   max-width: 90%;
+  padding-bottom: 36px;
   margin: auto;
   flex-direction: column;
   align-items: center;
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 420px) {
+  main {
+    max-width: 100%;
+  }
+  body {
+    font-size: 1.25em;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+  main {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
 }

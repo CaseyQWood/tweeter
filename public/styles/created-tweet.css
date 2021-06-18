@@ -1,0 +1,78 @@
+.tweets-container {
+  display: flex;
+  background-color: rgb(193, 192, 192);
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 36px;
+  padding: 36px;
+  padding-bottom: 0;
+  flex-direction: column;
+  border: grey 5px solid;
+  border-radius: 30px;
+}
+
+.tweets-container:hover {
+  box-shadow: 0 0 11px white; 
+}
+
+article header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-red {
+  color: maroon;
+}
+
+.color-grey {
+  color: grey
+}
+
+.time {
+  margin: 5px;
+}
+
+footer {
+  height: 50px;
+  border-top: grey 5px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1em;
+}
+
+.tiny-icon {
+  margin: 0 5px;
+  color: brown;
+  float: right;
+  padding-top: 15px;
+}
+
+.tiny-icon:hover {
+  color: lightcoral;
+}
+
+#tweet-text {
+  word-wrap: break-word;
+  /* overflow-wrap: anywhere; */
+}
+
+.user-name-icon {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  footer {
+    font-size: .65em;
+  } 
+
+  header div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .color-red {
+    width: 60px;
+  }
+}

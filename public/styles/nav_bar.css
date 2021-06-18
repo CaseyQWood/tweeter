@@ -1,43 +1,57 @@
 nav {
-    position: fixed;
-    left: 0;
-    right: 0;
-    background-color: grey;
-    background-image: url("https://www.transparenttextures.com/patterns/real-carbon-fibre.png");
-    color: #ffff;
-    height: 120px;
-    z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  color: #ffff;
+  height: 120px;
+  z-index: 1;
+}
+
+.nav-background {
+  background-color: grey;
+  background-image: url("https://www.transparenttextures.com/patterns/real-carbon-fibre.png");
 }
 
 nav span {
-    padding-top: 30px;
-    font-family: 'Bungee', cursive;
-    font-size: 1.5em;
+  padding-top: 30px;
+  font-family: 'Bungee', cursive;
+  font-size: 1.5em;
 }
 
 .hud {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    height: 120px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .fas {
-    color: red;
+  color: red;
 }
 
-#quick-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center
+.quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 
-#write-tweet {
-    margin: 0;
+.write-tweet {
+  margin: 0;
   
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  nav span {
+    font-size: 1em;
+    padding-top: 0;
+  }
+  .hud {
+    padding-top: 2em;
+    align-items: baseline;
+  }
 }
 
 
