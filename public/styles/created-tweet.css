@@ -22,8 +22,13 @@ article header {
 .color-red {
   color: maroon;
 }
+
 .color-grey {
   color: grey
+}
+
+.time {
+  margin: 5px;
 }
 
 footer {
@@ -32,7 +37,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 15px;
+  font-size: 1em;
 }
 
 .tiny-icon {
@@ -46,20 +51,26 @@ footer {
   color: lightcoral;
 }
 
-#wrap {
+#tweet-text {
   word-wrap: break-word;
 }
 
+.user-name-icon {
+  display: flex;
+  flex-direction: row;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 420px) {
   footer {
     font-size: .65em;
   } 
+
   header div {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
+
   .color-red {
     width: 60px;
   }

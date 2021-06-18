@@ -47,13 +47,19 @@
   text-shadow: 1px 1px rgba(250,250,250,.3);
 }
 
-#history {
+/* #history {
   padding-top: 15px;
-}
-
+} */
 
 @media only screen and (min-width: 1024px) {
-  new-tweet {
-    margin-top: 120px;
+
+  /* #history {
+    padding-top: 15px;
+  } */
+  /* dont think I need this  */
+
+  .main-tweet {
+    margin-top: 10em;
+    width: 75em;
   }
 }

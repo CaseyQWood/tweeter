@@ -39,28 +39,30 @@
         </div>
       </div>
     </nav>
-    <header id='profile'>
-      <div>
-        <img id='profile-tile' src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-        <h2 id='your-name'>Your Name</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class='main-tweet'>
-      <section class="new-tweet">
-        <span class='error-message error-text'>this is filler</span>
-        <form class='form-submit' method='POST' action='/tweets'>
-          <textarea placeholder="What are you humming about?" name="text" class="tweet-text-area"></textarea>​​​​​​​​​​​​​​​​​​​
-          <div class='bottom_line'>
-            <button class='button' type="submit">Tweet</button>
-            <output id='number' name="counter" class="counter" for="tweet-text-area">140</output>
-          </div>
-        </form>
-      </section>
-      <div id='history'></div>
-    </main>
+    <!-- <div class='side-by-side'> -->
+      <header id='profile'>
+        <div>
+          <img id='profile-tile' src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+          <h2 id='your-name'>Your Name</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class='main-tweet'>
+        <section class="new-tweet">
+          <span class='error-message error-text'></span>
+          <form class='form-submit' method='POST' action='/tweets'>
+            <textarea placeholder="What are you humming about?" name="text" class="tweet-text-area"></textarea>​​​​​​​​​​​​​​​​​​​
+            <div class='bottom_line'>
+              <button class='button' type="submit">Tweet</button>
+              <output id='number' name="counter" class="counter" for="tweet-text-area">140</output>
+            </div>
+          </form>
+        </section>
+        <div id='history'></div>
+      </main>
+    <!-- </div>   -->
   </body>
 </html>

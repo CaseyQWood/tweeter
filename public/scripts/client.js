@@ -20,7 +20,7 @@ const createTweetElement = function(data) {
       <header>
         <div>
           <image src='${escape(userKey.avatars)}' class="color-red"></image>
-          ${escape(userKey.name)}
+          <p>${escape(userKey.name)}</p>
         </div>
         <div>${escape(userKey.handle)}</div>
       </header>
@@ -41,7 +41,6 @@ const renderTweets = function(data) {
   for (const index of data) {
     const $tweet = createTweetElement(index)
     $('#history').prepend($tweet)
-
   }
 };
 
