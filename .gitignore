@@ -1,3 +1,4 @@
 node_modules/
 .env
 .DS_Store
+./Users/caseywood/lighthouse/w4/tweeter/server/data-files/initial-tweets.json
