@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log('start')
 
   $('.tweet-text-area').on('keyup', function(event) {
     let numCount = 140 - $(this).val().length;
@@ -13,6 +12,5 @@ $(document).ready(function() {
 
     $('#number').text(`${numCount}`);
   })
-  
 });
 

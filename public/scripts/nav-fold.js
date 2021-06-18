@@ -5,5 +5,4 @@ $('documents').ready(function() {
     $('.new-tweet').first().is(':hidden') ? $('.new-tweet').slideDown(): $('.new-tweet').slideUp()
 
   })
-
 })
