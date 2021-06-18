@@ -1,4 +1,4 @@
-#profile {
+.profile {
   background-color: #5b0202;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
   height: 520px;
@@ -19,7 +19,7 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 420px) {
-  #profile {
+  .profile {
     height: 450px;
   }
 
@@ -34,8 +34,8 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  #profile {
-    margin: 5em;
+  .profile {
+    margin: 5em 5% 0 5%;
     position: sticky;
     top: 10em;
   }

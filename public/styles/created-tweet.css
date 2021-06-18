@@ -53,6 +53,7 @@ footer {
 
 #tweet-text {
   word-wrap: break-word;
+  /* overflow-wrap: anywhere; */
 }
 
 .user-name-icon {
