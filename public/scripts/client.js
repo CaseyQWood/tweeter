@@ -7,6 +7,7 @@
 const createTweetElement = function(data) {
   const userKey = data.user;
   const timeAgo = timeago.format(data.created_at);
+  
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
